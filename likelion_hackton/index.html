@@ -11,6 +11,9 @@
 
     <title>Document</title>
     <style>
+        *{
+            font-family: "LeeSeoyun";
+        }
         body {
             width: 1550px;
 
@@ -19,6 +22,14 @@
             background-image: url('./backgroundcolor.jpg');
             background-size: 120%;
 
+        }
+
+        /* 이서윤체 폰트 적용을 위한 코드 */
+        @font-face {
+            font-family: "LeeSeoyun";
+            src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
         }
 
         a {
@@ -52,7 +63,7 @@
         .mainlogo {
             color: #010000;
             text-align: center;
-            font-family: Inter;
+            font-family: "LeeSeoyun";
             font-size: 75px;
             font-style: italic;
             font-weight: 700;
@@ -62,7 +73,7 @@
         .seconlogo {
             color: #000;
             text-align: center;
-            font-family: Inter;
+            
             font-size: 30px;
             font-style: italic;
             font-weight: 700;
@@ -95,13 +106,19 @@
 
         .mainbtn button {
             margin: 15px;
-            background: rgba(255, 160, 122, 0.5);
-            border: 2px solid black;
+            border: none;
+            background: orangered;
+            box-shadow:
+                inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+                inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+            background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
             border-radius: 20px;
-            width: 80px;
-            height: 40px;
+            width: 200px;
+            height: 50px;
             color: #FFF;
             font-weight: 700;
+            font-family: "LeeSeoyun";
+            font-size: 20px;
 
         }
 
@@ -112,7 +129,7 @@
         .thirdlogo {
             color: #000;
             text-align: center;
-            font-family: Inter;
+            
             font-size: 30px;
             font-style: italic;
             font-weight: 700;
@@ -130,9 +147,9 @@
 
 
         .middlesection img {
-            height: 400px;
-            width: 250px;
-            box-shadow: 20px 20px 50px rgb(0, 0, 0);
+            height: 300px;
+            width: 300px;
+            box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
             border-radius: 30px;
             margin: 30px;
 
@@ -424,6 +441,9 @@
         .row>div {
             margin: 40px;
         }
+        input::placeholder{
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -445,18 +465,19 @@
     <section>
 
         <div class="mainlogo">
-            <edu plat>
+            < edu plat>
         </div>
         <div class="seconlogo">
             일상생활의 불편함을 줄여 줄 교육 플렛폼
         </div>
-        
+
         <div class="mainsearchdiv">
-            <input type="text" class="mainsearch" placeholder="찾으실 항목을 입력하세요">
+            <input type="text" class="mainsearch"
+                placeholder="찾으실 항목을 입력하세요                 ....ex 키오스크 , 휴대폰">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="mainbtn">
-            <a href="./storeHome.html"><button class="shop">상점</button></a>
+            <a href="storeHome.html"><button class="shop">상점</button></a>
             <a href="qna.html"><button class="qna">Q&A</button></a>
             <a href="myinfo.html"><button class="favorite">즐겨찾기</button></a>
         </div>
@@ -466,21 +487,21 @@
 
         <div class="middlesection">
 
-            <a href="list/smartphone.html"><img src="/picture/스마트폰.jpg" alt="" class="mainimg1"></a>
+            <a href="smartphone.html"><img src="/picture/스마트폰.jpg" alt="" class="mainimg1"></a>
 
 
-            <a href="list/keyowsk.html"><img src="/picture/키오스크.png" alt="" class="mainimg2"></a>
+            <a href="keyowsk.html"><img src="/picture/키오스크.png" alt="" class="mainimg2"></a>
 
 
-            <a href="list/ticket.html"><img src="/picture/영화.jpg" alt="" class="mainimg3"></a>
+            <a href="ticket.html"><img src="/picture/영화.jpg" alt="" class="mainimg3"></a>
 
-            <a href="/list/wifi.html"><img src="/picture/와이파이.jpg" alt="" class="mainimg3"></a>
+            <a href="wifi.html"><img src="/picture/와이파이.jpg" alt="" class="mainimg3"></a>
         </div>
 
         </div>
         <div class="login">
             <div class="loginbox">
-                <div style="font-size: 40px; position: absolute; top: 110px; left: 280px;">
+                <div style="font-size: 40px; position: absolute; top: 150px; left: 300px;">
                     로그인
                 </div>
                 <div style="margin: 0; position: absolute; top: 20px; right: 20px;">
@@ -500,7 +521,7 @@
         </div>
         <div class="newlogin">
             <div class="newloginbox">
-                <div style="font-size: 40px; position: absolute; top: 30px; left: 280px;">
+                <div style="font-size: 40px; position: absolute; top: 100px; left: 300px;">
                     회원가입
                 </div>
                 <div style="margin: 0; position: absolute; top: 20px; right: 20px;">
